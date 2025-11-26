@@ -20,8 +20,8 @@ jobs:
           curl \
             -X POST \
             -H "Content-Type: application/json" \
-            -d '{
-              "content": "📢 新しいプルリクエストが作成されました！"
+            -d '{ \
+              "content": "📢 新しいプルリクエストが作成されました！" \
             }' \
             "$DISCORD_WEBHOOK_URL"
 
@@ -31,8 +31,8 @@ jobs:
           curl \
             -X POST \
             -H "Content-Type: application/json" \
-            -d '{
-              "content": "✅ メインブランチにマージされました！"
+            -d '{ \
+              "content": "✅ メインブランチにマージされました！" \
             }' \
             "$DISCORD_WEBHOOK_URL"
             
