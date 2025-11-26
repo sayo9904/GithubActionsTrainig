@@ -21,13 +21,13 @@ jobs:
             -X POST \
             -H "Content-Type: application/json" \
             -d '{
-              "content": "📢 新しいプルリクエストが作成されました！", \
+              "content": "📢 新しいプルリクエストが作成されました！",
               "embeds": [
                 {
-                  "title": "プルリクエスト #'${{ github.event.number }}': ${{ github.event.pull_request.title }}", \
-                  "url": "${{ github.event.pull_request.html_url }}", \
-                  "description": "作成者: ${{ github.event.pull_request.user.login }}", \
-                  "color": 0x6ab7ff \
+                  "title": "プルリクエスト #'${{ github.event.number }}': ${{ github.event.pull_request.title }}",
+                  "url": "${{ github.event.pull_request.html_url }}",
+                  "description": "作成者: ${{ github.event.pull_request.user.login }}",
+                  "color": 6993919
                 }
               ]
             }' \
@@ -40,15 +40,14 @@ jobs:
             -X POST \
             -H "Content-Type: application/json" \
             -d '{
-              "content": "✅ メインブランチが更新されました！", \
+              "content": "✅ メインブランチが更新されました！",
               "embeds": [
                 {
-                  "title": "メインブランチ更新", \
-                  "url": "${{ github.event.compare }}", \
-                  "description": "最新のコミット: ${{ github.event.head_commit.message }}", \
-                  "color": 0x82ff92 \
+                  "title": "メインブランチ更新",
+                  "url": "${{ github.event.compare }}",
+                  "description": "最新のコミット: ${{ github.event.head_commit.message }}",
+                  "color": 8585106
                 }
               ]
             }' \
             "$DISCORD_WEBHOOK_URL"
-            
